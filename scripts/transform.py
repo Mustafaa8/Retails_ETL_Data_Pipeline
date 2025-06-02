@@ -33,6 +33,8 @@ def transofrm_raw_data(dataframe):
         print("Transforming Loaded Data...")
         dataframe['date'] = pd.to_datetime(dataframe['date'])
         dataframe['discount'] = dataframe['discount'].astype('float64') / 100
+        dataframe['promotion'] = dataframe['promotion'].astype('boolean')
+        dataframe['epidemic'] = dataframe['epidemic'].astype('boolean')
         return dataframe
     except Exception as e:
         print("Data couldn't be transformed",e)
@@ -52,7 +54,8 @@ def silver_layer_data(dateframe,engine):
         dateframe.to_sql("silver_layer",con = engine,if_exists = "replace",index = False,chunksize=5000)
         print("Removing Raw Data...")
         with engine.connect() as conn:
-            conn.execute(text("DROP TABLE raw_data"))
+            conn.execute(text("DROP TABLE raw_data;"))
+            conn.commit()
         print("Silver Layer data is in database and Raw Data Removed")
     except Exception as e:
         print("Data couldn't be loaded to database",e)

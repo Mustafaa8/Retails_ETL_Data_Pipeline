@@ -54,7 +54,7 @@ def load_data_into_db(dataframe,engine):
     try:
         
         print("Ingesting Data into the database...")
-        dataframe.to_sql("raw_data",con=engine,if_exists="replace",index=False,chunksize=1000)
+        dataframe.to_sql("raw_data",con=engine,if_exists="replace",index=False,chunksize=5000)
         print("Data successfully ingested into raw_data table.")
     except Exception as e:
         print("Couldn't ingest the data",e)
