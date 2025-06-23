@@ -2,7 +2,7 @@ from extract import db_connection
 import pandas as pd
 from sqlalchemy import text
 
-DBURL = "postgresql+psycopg2://airflow:airflow@localhost:5432/airflow"
+DBURL = "postgresql+psycopg2://kestra:k3str4@postgres:5432/kestra"
 
 def load_raw_data(engine):
     """

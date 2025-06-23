@@ -2,7 +2,7 @@ from extract import db_connection
 import pandas as pd
 from sqlalchemy import text
 
-DBURL = "postgresql+psycopg2://airflow:airflow@localhost:5432/airflow"
+DBURL = "postgresql+psycopg2://kestra:k3str4@postgres:5432/kestra"
 
 def create_schema(engine):
     try:
@@ -69,7 +69,7 @@ def fact_table_model(dataframe,engine):
         dataframe = dataframe.iloc[:,[11,10,9,0,1,2,3,4,5,6,7,8]]
         dataframe.to_sql("Fact_table",con=engine,schema='dwh',if_exists='replace',index=False)
         with engine.connect() as conn:
-            conn.execute(text("DROP TABLE silver_layer"))
+            conn.execute(text("DROP TABLE silver_layer;"))
     except Exception as e:
         print("Couldn't create the Fact table",e)
         raise

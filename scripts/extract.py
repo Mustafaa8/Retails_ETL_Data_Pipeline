@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 import pandas as pd
 
-FILEPATH = "/home/mostafa/data/airflow-docker/data/sales_data.csv"
-DBURL = "postgresql+psycopg2://airflow:airflow@localhost:5432/airflow"
+FILEPATH = "/data/sales_data.csv"
+DBURL = "postgresql+psycopg2://kestra:k3str4@postgres:5432/kestra"
 
 def db_connection(db_url):
     """
