@@ -1,8 +1,6 @@
 volumes:
   postgres-data:
-    driver: local
   kestra-data:
-    driver: local
 
 services:
   postgres:
