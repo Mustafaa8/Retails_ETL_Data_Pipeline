@@ -33,7 +33,7 @@ retail-etl-pipeline/
 
 ## ⚙️ Pipeline Structure and Technologies Used
 
-![Datapipeline](https://github.com/user-attachments/assets/b80f16bc-cd9a-4773-aaf6-99dd92843b54)
+![Untitled Diagram](https://github.com/user-attachments/assets/3d4f5fb3-ac29-4b87-8c00-8bd0ad6af915)
 
 | Tool        | Purpose                         |
 |-------------|----------------------------------|
