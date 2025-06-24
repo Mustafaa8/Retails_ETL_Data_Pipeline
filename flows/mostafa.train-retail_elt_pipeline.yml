@@ -1,0 +1,31 @@
+id: retail_elt_pipeline
+namespace: mostafa.train
+
+tasks:
+
+  - id: Extract
+    type: io.kestra.plugin.scripts.python.Commands
+    beforeCommands:
+      - pip install pandas psycopg2-binary sqlalchemy
+    commands:
+      - python3 /scripts/extract.py
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+
+  - id: Transform
+    type: io.kestra.plugin.scripts.python.Commands
+    beforeCommands:
+      - pip install pandas psycopg2-binary sqlalchemy
+    commands:
+      - python3 /scripts/transform.py
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
+
+  - id: Load
+    type: io.kestra.plugin.scripts.python.Commands
+    beforeCommands:
+      - pip install pandas psycopg2-binary sqlalchemy
+    commands:
+      - python3 /scripts/load.py
+    taskRunner:
+      type: io.kestra.plugin.core.runner.Process
