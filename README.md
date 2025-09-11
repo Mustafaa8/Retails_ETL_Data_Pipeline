@@ -80,7 +80,13 @@ You can easily extend this pipeline by:
 
 ## 📊 Dashboard
 
-![Dashboard](Capture.PNG)
+Dashboard was made using Power BI including some important insights: 
+- Competitors price analysis
+- Category Dominance
+- Month Sales
+- Summary Stats
+
+![Dashboard](Power BI Dashboard.PNG)
 
 ---
 
