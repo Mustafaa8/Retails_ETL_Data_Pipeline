@@ -33,7 +33,7 @@ retail-etl-pipeline/
 
 ## ⚙️ Pipeline Structure and Technologies Used
 
-![Untitled Diagram](https://github.com/user-attachments/assets/3d4f5fb3-ac29-4b87-8c00-8bd0ad6af915)
+![Pipeline Diagram](https://github.com/user-attachments/assets/3d4f5fb3-ac29-4b87-8c00-8bd0ad6af915)
 
 | Tool        | Purpose                         |
 |-------------|----------------------------------|
@@ -62,7 +62,7 @@ No need to install Python or Kestra separately — everything runs inside contai
 
 A basic ETL workflow includes:
 
-![vue-flow-screenshot-1750710433065](https://github.com/user-attachments/assets/4564b1d9-6252-4d8b-a2e0-002bbea9b358)
+![ETL Flow](https://github.com/user-attachments/assets/4564b1d9-6252-4d8b-a2e0-002bbea9b358)
 
 1. **Extract**: Read raw sales data from CSV
 2. **Transform**: Clean and aggregate data using Pandas (`scripts/transform.py`)
@@ -78,12 +78,9 @@ You can easily extend this pipeline by:
 
 ---
 
-## 📊 Example Use Cases
+## 📊 Dashboard
 
-- Daily revenue aggregation
-- Inventory tracking
-- Customer segmentation
-- Sales forecasting prep
+![Dashboard](Capture.PNG)
 
 ---
 
