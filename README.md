@@ -86,7 +86,7 @@ Dashboard was made using Power BI including some important insights:
 - Month Sales
 - Summary Stats
 
-![Dashboard]("Power BI Dashboard.PNG")
+![Dashboard](Power\ BI\ Dashboard.PNG)
 
 ---
 
